@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+
+    <a md-button routerLink="/garden" routerLinkActive="active" class="navbar">庄园</a>
+    <a md-button routerLink="/town" routerLinkActive="active" class="navbar">小镇</a>
+    <a md-button routerLink="/yamen" routerLinkActive="active" class="navbar">衙门</a>
+    <a md-button routerLink="/adventure" routerLinkActive="active" class="navbar">冒险</a>
+    <span class="spacer"></span>
+    <md-icon class="icon" title="大记事">event</md-icon>
+
+</md-toolbar>
+
+<!--<button md-raised-button color="primary">PRIMARY</button>
+<button md-raised-button color="accent">ACCENT</button>
+<button md-button color="accent">探索</button>
+<button md-raised-button color="warn">WARN</button>
+<button md-raised-button color="foreground">foreground</button>
+<button md-raised-button color="background">background</button>
+<button md-raised-button color="theme">theme</button>
+-->
+
+<router-outlet></router-outlet>

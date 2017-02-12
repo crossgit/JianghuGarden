@@ -1,0 +1,44 @@
+<md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav">
+        <md-list color="accent">
+            <md-list-item><a routerLink="/garden/house" class="navbar">厢房</a></md-list-item>
+            <md-list-item><a routerLink="/garden/study" color="accent" class="navbar">藏书楼</a></md-list-item>
+            <md-list-item><a routerLink="/garden/practice" color="accent" class="navbar">练武场</a></md-list-item>
+            <md-list-item><a routerLink="/garden/hill" color="accent" class="navbar">后山</a></md-list-item>
+        </md-list>
+    </md-sidenav>
+    <!--<md-sidenav #homeBattle class="example-sidenav">
+        <md-list background-color="accent">
+            <md-list-item><a routerLink="/battle/map1" class="navbar">地图1</a></md-list-item>
+            <md-list-item><a routerLink="/battle/map2" color="accent" class="navbar">地图2</a></md-list-item>
+            <md-list-item><a routerLink="/battle/map3" color="accent" class="navbar">地图3</a></md-list-item>
+            <md-list-item><a routerLink="/battle/map4" color="accent" class="navbar">地图4</a></md-list-item>
+        </md-list>
+    </md-sidenav>-->
+    <md-toolbar>
+        <button md-raised-button color="accent" (click)="sidenav.toggle()">
+        地图
+        </button>
+        <span class="spacer"></span>
+        <!--<span md-raised-button>人数</span>
+            <span md-raised-button>药材</span>
+            <span md-raised-button>茶叶</span>
+            <span md-raised-button>银两</span>-->
+        <button md-icon-button [mdMenuTriggerFor]="menu"> 
+                <md-icon>more_vert</md-icon>
+            </button>
+        <md-menu #menu="mdMenu">
+            <a md-menu-item>
+                <md-icon>dialpad</md-icon>
+                <span>人员统计</span>
+            </a>
+            <button md-menu-item>
+                    <md-icon>dialpad</md-icon>
+                    <span>厢房统计</span>
+                </button>
+        </md-menu>
+    </md-toolbar>
+
+    <router-outlet></router-outlet>
+
+</md-sidenav-container>
