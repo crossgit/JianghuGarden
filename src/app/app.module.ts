@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs'
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 // import { AdventureComponent } from './adventure/adventure.component';
 // import { TownComponent } from './town/town.component';
 

@@ -5,13 +5,29 @@
     <md-grid-tile colspan=1 rowspan=4>
         <button md-fab style="bottom: 0">建造</button>
     </md-grid-tile>
-    <md-grid-tile colspan=3 rowspan=1>
+
+    <md-grid-tile colspan=3 rowspan=1 *ngFor="let item of houseList">
+        <md-card>
+            <md-card-header>
+                <md-card-title>{{item.name}}</md-card-title>
+                <md-card-subtitle>{{item.code}}{{item.heroDetail.length}}</md-card-subtitle>
+            </md-card-header>
+            <!--<img md-card-image src="" alt="">-->
+            <md-card-content>
+
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>入住</button>
+                <button md-button>清除</button>
+            </md-card-actions>
+        </md-card>
+    </md-grid-tile>
+    <!--<md-grid-tile colspan=3 rowspan=1>
         <md-card>
             <md-card-header>
                 <md-card-title>小房间</md-card-title>
                 <md-card-subtitle>等级,容纳人数,已住人数</md-card-subtitle>
             </md-card-header>
-            <!--<img  md-card-image src="" alt="">-->
             <md-card-content>
 
             </md-card-content>
@@ -27,7 +43,6 @@
                 <md-card-title>小房间</md-card-title>
                 <md-card-subtitle>等级,容纳人数,已住人数</md-card-subtitle>
             </md-card-header>
-            <!--<img  md-card-image src="" alt="">-->
 
             <md-card-actions>
                 <button md-button>入住</button>
@@ -41,7 +56,6 @@
                 <md-card-title>中型房间</md-card-title>
                 <md-card-subtitle>等级,容纳人数,已住人数</md-card-subtitle>
             </md-card-header>
-            <!--<img  md-card-image src="" alt="">-->
             <md-card-content>
 
             </md-card-content>
@@ -57,7 +71,6 @@
                 <md-card-title>大房间</md-card-title>
                 <md-card-subtitle>等级,容纳人数,已住人数</md-card-subtitle>
             </md-card-header>
-            <!--<img  md-card-image src="" alt="">-->
             <md-card-content>
 
             </md-card-content>
@@ -66,5 +79,5 @@
                 <button md-button>清除</button>
             </md-card-actions>
         </md-card>
-    </md-grid-tile>
+    </md-grid-tile>-->
 </md-grid-list>

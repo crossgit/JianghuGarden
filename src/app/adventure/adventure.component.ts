@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router }    from '@angular/router';
+ 
 @Component({
   selector: 'app-adventure',
   templateUrl: './adventure.component.html',
-  styleUrls: ['./adventure.component.css']
+  styleUrls: ['./adventure.component.css'], 
+ 
 })
 export class AdventureComponent implements OnInit {
   folders = [
@@ -30,9 +32,8 @@ export class AdventureComponent implements OnInit {
       updated: new Date('1/18/16'),
     }
   ];
-  constructor() { }
+ 
+ constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { } 
 }
