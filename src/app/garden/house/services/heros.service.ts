@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import  'rxjs';
 // import 'rxjs/add/observable/combineLatest';
-import { Hero } from '../../../../models/hero';
+import { Hero } from '../../../../models/Hero';
 import { House } from '../../../../models/House';
 @Injectable()
 export /**
@@ -29,8 +29,7 @@ export /**
     getAll(): any {
         return Observable.combineLatest(
             this.getHeros(), this.getHouse())
-            .map(res => {
-                console.log(res);
+            .map(res => { 
                 return res;
             }).catch(this.handleError);
     }

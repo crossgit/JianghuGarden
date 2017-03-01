@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Hero } from '../../../models/hero';
+import { Hero } from '../../../models/Hero';
 import { House } from '../../../models/House';
 import { HeroServcies } from './services/heros.service';
 import * as _ from 'lodash';
@@ -21,14 +21,16 @@ export class HouseComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //  this.getHeroList();
+    this.getHeroList(); //测试
     this.getAll();
   }
 
   getHeroList() {
     this.heroServcies.getHeros()
       .subscribe(
-      res => this.heros = res,
+      res => {this.heros = res;
+        console.log(this.heros);
+      },
       error => this.errorMessage = <any>error);
   }
 

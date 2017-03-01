@@ -1,4 +1,4 @@
-
+import { Hero } from './Hero';
 export  class House {
     id: number; 
     code:string;
@@ -6,6 +6,6 @@ export  class House {
     capacity:number; 
     character:string; 
     introduction:string;
-    heroDetail:any;
+    heroDetail:Hero[];
     constructor() { }
 }

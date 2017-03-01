@@ -8,5 +8,5 @@ export  class Hero {
     houseId:number;
     introduction:string;
     
-    constructor() { }
+    // constructor() { }
 }
