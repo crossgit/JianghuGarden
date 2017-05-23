@@ -5,7 +5,14 @@ import  'rxjs';
 // import 'rxjs/add/observable/combineLatest';
 import { Hero } from '../../../../models/Hero';
 import { House } from '../../../../models/House';
+/**
+ * 
+ * 
+ * @export
+ * @class HeroServcies
+ */
 @Injectable()
+
 export /**
  * HeroServcies
  */
@@ -19,7 +26,11 @@ export /**
             .map(this.extractData)
             .catch(this.handleError);
     }
-
+    getOneHero(id:number): Observable<Hero> {
+        return this.http.get('/api/heros/'+id)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
     getHouse():Observable<House[]> {
         return this.http.get('/api/house')
             .map(this.extractData)
